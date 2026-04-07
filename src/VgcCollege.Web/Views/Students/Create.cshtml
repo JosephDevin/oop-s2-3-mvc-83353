@@ -1,0 +1,58 @@
+@model VgcCollege.Web.Models.StudentProfile
+@{
+    ViewData["Title"] = "Create Student";
+}
+
+<h2 class="mb-4">Create Student Profile</h2>
+
+<div class="card" style="max-width:600px">
+    <div class="card-body">
+        <form asp-action="Create" method="post">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label asp-for="StudentNumber" class="form-label"></label>
+                    <input asp-for="StudentNumber" class="form-control" placeholder="VGC2025XXX" />
+                    <span asp-validation-for="StudentNumber" class="text-danger small"></span>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label asp-for="IdentityUserId" class="form-label">Identity User ID</label>
+                    <input asp-for="IdentityUserId" class="form-control" />
+                    <span asp-validation-for="IdentityUserId" class="text-danger small"></span>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Name" class="form-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger small"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Email" class="form-label"></label>
+                <input asp-for="Email" class="form-control" type="email" />
+                <span asp-validation-for="Email" class="text-danger small"></span>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label asp-for="Phone" class="form-label"></label>
+                    <input asp-for="Phone" class="form-control" />
+                    <span asp-validation-for="Phone" class="text-danger small"></span>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label asp-for="DateOfBirth" class="form-label"></label>
+                    <input asp-for="DateOfBirth" class="form-control" type="date" />
+                    <span asp-validation-for="DateOfBirth" class="text-danger small"></span>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Address" class="form-label"></label>
+                <input asp-for="Address" class="form-control" />
+                <span asp-validation-for="Address" class="text-danger small"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Create</button>
+            <a asp-action="Index" class="btn btn-secondary ms-2">Cancel</a>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

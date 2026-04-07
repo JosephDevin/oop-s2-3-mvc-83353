@@ -1,0 +1,48 @@
+@model IEnumerable<VgcCollege.Web.Models.ExamResult>
+@{
+    ViewData["Title"] = "My Exam Results";
+}
+
+<h2 class="mb-4">My Exam Results</h2>
+
+<div class="alert alert-info">
+    Only results that have been released by your lecturer are shown here.
+</div>
+
+<div class="card">
+    <div class="table-responsive">
+        <table class="table table-hover mb-0">
+            <thead class="table-light">
+                <tr>
+                    <th>Exam</th>
+                    <th>Course</th>
+                    <th>Date</th>
+                    <th>Score</th>
+                    <th>Max Score</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (!Model.Any())
+                {
+                    <tr><td colspan="6" class="text-center text-muted py-4">No released results available yet.</td></tr>
+                }
+                @foreach (var r in Model)
+                {
+                    <tr>
+                        <td class="fw-semibold">@r.Exam?.Title</td>
+                        <td>@r.Exam?.Course?.Name</td>
+                        <td>@r.Exam?.ExamDate.ToString("dd MMM yyyy")</td>
+                        <td>@r.Score</td>
+                        <td>@r.Exam?.MaxScore</td>
+                        <td>
+                            <span class="badge fs-6 bg-@(r.Grade == "A" ? "success" : r.Grade == "B" ? "primary" : r.Grade == "C" ? "info" : r.Grade == "D" ? "warning" : "danger")">
+                                @r.Grade
+                            </span>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

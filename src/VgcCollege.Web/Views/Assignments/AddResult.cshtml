@@ -1,0 +1,39 @@
+@model VgcCollege.Web.Models.AssignmentResult
+@{
+    ViewData["Title"] = "Add Assignment Result";
+    var assignment = ViewBag.Assignment as VgcCollege.Web.Models.Assignment;
+}
+
+<h2 class="mb-4">Add Result for: @assignment?.Title</h2>
+<p class="text-muted">Max Score: @assignment?.MaxScore | Due: @assignment?.DueDate.ToString("dd MMM yyyy")</p>
+
+<div class="card" style="max-width:500px">
+    <div class="card-body">
+        <form asp-action="AddResult" method="post">
+            <input type="hidden" asp-for="AssignmentId" />
+            <div class="mb-3">
+                <label asp-for="StudentProfileId" class="form-label">Student</label>
+                <select asp-for="StudentProfileId" asp-items="ViewBag.Students" class="form-select">
+                    <option value="">-- Select Student --</option>
+                </select>
+                <span asp-validation-for="StudentProfileId" class="text-danger small"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Score" class="form-label">Score (max: @assignment?.MaxScore)</label>
+                <input asp-for="Score" class="form-control" type="number" step="0.01" max="@assignment?.MaxScore" />
+                <span asp-validation-for="Score" class="text-danger small"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Feedback" class="form-label"></label>
+                <textarea asp-for="Feedback" class="form-control" rows="3"></textarea>
+                <span asp-validation-for="Feedback" class="text-danger small"></span>
+            </div>
+            <button type="submit" class="btn btn-success">Save Result</button>
+            <a asp-action="Details" asp-route-id="@assignment?.Id" class="btn btn-secondary ms-2">Cancel</a>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

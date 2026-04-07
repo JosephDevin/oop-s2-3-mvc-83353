@@ -1,0 +1,39 @@
+@model IEnumerable<VgcCollege.Web.Models.Branch>
+@{
+    ViewData["Title"] = "Branches";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>Branches</h2>
+    <a asp-action="Create" class="btn btn-primary">+ New Branch</a>
+</div>
+
+<div class="card">
+    <div class="table-responsive">
+        <table class="table table-hover mb-0">
+            <thead class="table-light">
+                <tr>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Courses</th>
+                    <th class="text-end">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var branch in Model)
+                {
+                    <tr>
+                        <td class="fw-semibold">@branch.Name</td>
+                        <td>@branch.Address</td>
+                        <td><span class="badge bg-secondary">@branch.Courses.Count</span></td>
+                        <td class="text-end">
+                            <a asp-action="Details" asp-route-id="@branch.Id" class="btn btn-sm btn-outline-secondary">Details</a>
+                            <a asp-action="Edit" asp-route-id="@branch.Id" class="btn btn-sm btn-outline-primary">Edit</a>
+                            <a asp-action="Delete" asp-route-id="@branch.Id" class="btn btn-sm btn-outline-danger">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

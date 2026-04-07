@@ -1,0 +1,56 @@
+@model VgcCollege.Web.Models.Course
+@{
+    ViewData["Title"] = "Course Details";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>@Model.Name</h2>
+    <div>
+        @if (User.IsInRole("Administrator"))
+        {
+            <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-outline-primary">Edit</a>
+        }
+        <a asp-action="Index" class="btn btn-secondary ms-2">Back</a>
+    </div>
+</div>
+
+<div class="row g-4">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header fw-semibold">Course Info</div>
+            <div class="card-body">
+                <dl class="row mb-0">
+                    <dt class="col-5">Branch</dt>
+                    <dd class="col-7">@Model.Branch?.Name</dd>
+                    <dt class="col-5">Start Date</dt>
+                    <dd class="col-7">@Model.StartDate.ToString("dd MMM yyyy")</dd>
+                    <dt class="col-5">End Date</dt>
+                    <dd class="col-7">@Model.EndDate.ToString("dd MMM yyyy")</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <div class="card mb-3">
+            <div class="card-header fw-semibold">Faculty Assigned</div>
+            <ul class="list-group list-group-flush">
+                @foreach (var fa in Model.FacultyAssignments)
+                {
+                    <li class="list-group-item">@fa.FacultyProfile?.Name <small class="text-muted">(@fa.FacultyProfile?.Email)</small></li>
+                }
+            </ul>
+        </div>
+        <div class="card">
+            <div class="card-header fw-semibold">Enrolled Students (@Model.Enrolments.Count)</div>
+            <ul class="list-group list-group-flush">
+                @foreach (var enrol in Model.Enrolments)
+                {
+                    <li class="list-group-item d-flex justify-content-between">
+                        <span>@enrol.StudentProfile?.Name</span>
+                        <span class="badge bg-@(enrol.Status == VgcCollege.Web.Models.EnrolmentStatus.Active ? "success" : enrol.Status == VgcCollege.Web.Models.EnrolmentStatus.Withdrawn ? "danger" : "secondary")">@enrol.Status</span>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>

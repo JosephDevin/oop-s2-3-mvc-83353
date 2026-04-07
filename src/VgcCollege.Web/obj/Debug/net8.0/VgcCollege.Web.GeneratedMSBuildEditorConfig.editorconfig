@@ -1,0 +1,267 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFrameworkIdentifier = .NETCoreApp
+build_property.TargetFrameworkVersion = v8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = VgcCollege.Web
+build_property.RootNamespace = VgcCollege.Web
+build_property.ProjectDir = /home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Assignments/AddResult.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXNzaWdubWVudHMvQWRkUmVzdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Assignments/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXNzaWdubWVudHMvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Assignments/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXNzaWdubWVudHMvRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Assignments/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXNzaWdubWVudHMvRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Assignments/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXNzaWdubWVudHMvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Assignments/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXNzaWdubWVudHMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Assignments/StudentResults.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXNzaWdubWVudHMvU3R1ZGVudFJlc3VsdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Attendance/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXR0ZW5kYW5jZS9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Attendance/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXR0ZW5kYW5jZS9EZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Attendance/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXR0ZW5kYW5jZS9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Attendance/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXR0ZW5kYW5jZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Branches/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQnJhbmNoZXMvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Branches/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQnJhbmNoZXMvRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Branches/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQnJhbmNoZXMvRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Branches/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQnJhbmNoZXMvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Branches/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQnJhbmNoZXMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Courses/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ291cnNlcy9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Courses/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ291cnNlcy9EZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Courses/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ291cnNlcy9EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Courses/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ291cnNlcy9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Courses/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ291cnNlcy9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Enrolments/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW5yb2xtZW50cy9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Enrolments/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW5yb2xtZW50cy9EZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Enrolments/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW5yb2xtZW50cy9EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Enrolments/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW5yb2xtZW50cy9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Enrolments/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW5yb2xtZW50cy9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Exams/AddResult.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRXhhbXMvQWRkUmVzdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Exams/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRXhhbXMvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Exams/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRXhhbXMvRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Exams/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRXhhbXMvRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Exams/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRXhhbXMvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Exams/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRXhhbXMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Exams/StudentResults.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRXhhbXMvU3R1ZGVudFJlc3VsdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Faculty/AssignCourse.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRmFjdWx0eS9Bc3NpZ25Db3Vyc2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Faculty/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRmFjdWx0eS9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Faculty/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRmFjdWx0eS9EZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Faculty/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRmFjdWx0eS9EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Faculty/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRmFjdWx0eS9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Faculty/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRmFjdWx0eS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Home/AdminDashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9BZG1pbkRhc2hib2FyZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Home/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9FcnJvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Home/FacultyDashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9GYWN1bHR5RGFzaGJvYXJkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Home/NeedProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9OZWVkUHJvZmlsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Home/NotFound.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Ob3RGb3VuZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Home/ServerError.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9TZXJ2ZXJFcnJvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Home/StudentDashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9TdHVkZW50RGFzaGJvYXJkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Shared/_NavigationPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19OYXZpZ2F0aW9uUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Students/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3R1ZGVudHMvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Students/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3R1ZGVudHMvRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Students/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3R1ZGVudHMvRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Students/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3R1ZGVudHMvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Students/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3R1ZGVudHMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Students/MyProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3R1ZGVudHMvTXlQcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/fan/Desktop/Dorset/Modern/src/VgcCollege.Web/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-judvhbsdmg

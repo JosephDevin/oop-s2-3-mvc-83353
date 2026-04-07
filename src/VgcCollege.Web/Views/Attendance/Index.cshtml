@@ -1,0 +1,69 @@
+@model IEnumerable<VgcCollege.Web.Models.AttendanceRecord>
+@{
+    ViewData["Title"] = "Attendance";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>Attendance Records</h2>
+    @if (User.IsInRole("Administrator") || User.IsInRole("Faculty"))
+    {
+        <a asp-action="Create" class="btn btn-primary">+ Add Record</a>
+    }
+</div>
+
+<div class="card">
+    <div class="table-responsive">
+        <table class="table table-hover mb-0">
+            <thead class="table-light">
+                <tr>
+                    @if (!User.IsInRole("Student"))
+                    {
+                        <th>Student</th>
+                    }
+                    <th>Course</th>
+                    <th>Date</th>
+                    <th>Week</th>
+                    <th>Present</th>
+                    @if (User.IsInRole("Administrator") || User.IsInRole("Faculty"))
+                    {
+                        <th class="text-end">Actions</th>
+                    }
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var r in Model)
+                {
+                    <tr>
+                        @if (!User.IsInRole("Student"))
+                        {
+                            <td>@r.CourseEnrolment?.StudentProfile?.Name</td>
+                        }
+                        <td>@r.CourseEnrolment?.Course?.Name</td>
+                        <td>@r.SessionDate.ToString("dd MMM yyyy")</td>
+                        <td>@r.WeekNumber</td>
+                        <td>
+                            @if (r.Present)
+                            {
+                                <span class="badge bg-success">Present</span>
+                            }
+                            else
+                            {
+                                <span class="badge bg-danger">Absent</span>
+                            }
+                        </td>
+                        @if (User.IsInRole("Administrator") || User.IsInRole("Faculty"))
+                        {
+                            <td class="text-end">
+                                <a asp-action="Edit" asp-route-id="@r.Id" class="btn btn-sm btn-outline-primary">Edit</a>
+                                @if (User.IsInRole("Administrator"))
+                                {
+                                    <a asp-action="Delete" asp-route-id="@r.Id" class="btn btn-sm btn-outline-danger">Delete</a>
+                                }
+                            </td>
+                        }
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

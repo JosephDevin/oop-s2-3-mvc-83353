@@ -1,0 +1,53 @@
+@model VgcCollege.Web.Models.CourseEnrolment
+@{
+    ViewData["Title"] = "Enrolment Details";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>Enrolment Details</h2>
+    <a asp-action="Index" class="btn btn-secondary">Back</a>
+</div>
+
+<div class="row g-4">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header fw-semibold">Enrolment Info</div>
+            <div class="card-body">
+                <dl class="row mb-0">
+                    <dt class="col-5">Student</dt>
+                    <dd class="col-7">@Model.StudentProfile?.Name</dd>
+                    <dt class="col-5">Course</dt>
+                    <dd class="col-7">@Model.Course?.Name</dd>
+                    <dt class="col-5">Branch</dt>
+                    <dd class="col-7">@Model.Course?.Branch?.Name</dd>
+                    <dt class="col-5">Enrol Date</dt>
+                    <dd class="col-7">@Model.EnrolDate.ToString("dd MMM yyyy")</dd>
+                    <dt class="col-5">Status</dt>
+                    <dd class="col-7"><span class="badge bg-@(Model.Status == VgcCollege.Web.Models.EnrolmentStatus.Active ? "success" : Model.Status == VgcCollege.Web.Models.EnrolmentStatus.Withdrawn ? "danger" : "secondary")">@Model.Status</span></dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header fw-semibold">Attendance (@Model.AttendanceRecords.Count records)</div>
+            <div class="table-responsive">
+                <table class="table table-sm mb-0">
+                    <thead class="table-light">
+                        <tr><th>Date</th><th>Week</th><th>Present</th></tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var a in Model.AttendanceRecords.OrderBy(a => a.SessionDate))
+                        {
+                            <tr>
+                                <td>@a.SessionDate.ToString("dd MMM yyyy")</td>
+                                <td>@a.WeekNumber</td>
+                                <td>@(a.Present ? "Yes" : "No")</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

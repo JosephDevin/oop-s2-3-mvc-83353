@@ -1,0 +1,19 @@
+@model VgcCollege.Web.Models.Branch
+@{
+    ViewData["Title"] = "Delete Branch";
+}
+
+<h2>Delete Branch</h2>
+<div class="alert alert-warning mt-3">
+    Are you sure you want to delete branch <strong>@Model.Name</strong>?
+    @if (Model.Courses.Any())
+    {
+        <span>This branch has <strong>@Model.Courses.Count</strong> courses that will also be affected.</span>
+    }
+</div>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Yes, Delete</button>
+    <a asp-action="Index" class="btn btn-secondary ms-2">Cancel</a>
+</form>

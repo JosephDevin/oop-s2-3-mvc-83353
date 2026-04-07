@@ -1,0 +1,22 @@
+@model VgcCollege.Web.Models.FacultyCourseAssignment
+@{
+    ViewData["Title"] = "Assign Course";
+    var profile = ViewBag.FacultyProfile as VgcCollege.Web.Models.FacultyProfile;
+}
+
+<h2 class="mb-4">Assign Course to @profile?.Name</h2>
+
+<div class="card" style="max-width:400px">
+    <div class="card-body">
+        <form asp-action="AssignCourse" asp-route-id="@profile?.Id" method="post">
+            <div class="mb-3">
+                <label for="courseId" class="form-label">Course</label>
+                <select name="courseId" class="form-select" asp-items="ViewBag.Courses">
+                    <option value="">-- Select Course --</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-success">Assign</button>
+            <a asp-action="Details" asp-route-id="@profile?.Id" class="btn btn-secondary ms-2">Cancel</a>
+        </form>
+    </div>
+</div>

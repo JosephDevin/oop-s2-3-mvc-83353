@@ -1,0 +1,47 @@
+@{
+    ViewData["Title"] = "Student Dashboard";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2 class="mb-0">Welcome, @ViewBag.StudentName</h2>
+    <span class="badge bg-success fs-6">Student</span>
+</div>
+
+<div class="row g-4 mb-4">
+    <div class="col-sm-6">
+        <div class="card text-white bg-success h-100">
+            <div class="card-body">
+                <h5 class="card-title">Student Number</h5>
+                <p class="display-6 fw-bold mb-0">@ViewBag.StudentNumber</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="card text-white bg-primary h-100">
+            <div class="card-body">
+                <h5 class="card-title">Active Enrolments</h5>
+                <p class="display-5 fw-bold mb-0">@ViewBag.ActiveEnrolments</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-3">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header bg-light fw-semibold">My Account</div>
+            <div class="list-group list-group-flush">
+                <a asp-controller="Students" asp-action="MyProfile" class="list-group-item list-group-item-action">My Profile</a>
+                <a asp-controller="Attendance" asp-action="Index" class="list-group-item list-group-item-action">My Attendance</a>
+                <a asp-controller="Assignments" asp-action="Index" class="list-group-item list-group-item-action">My Assignment Results</a>
+                <a asp-controller="Exams" asp-action="Index" class="list-group-item list-group-item-action">My Released Exam Results</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="alert alert-info mb-0 h-100">
+            <h6 class="alert-heading">Note on Exam Results</h6>
+            <p class="mb-0 small">Exam results are only visible after they have been released by your lecturer. Check back after your exam period for updates.</p>
+        </div>
+    </div>
+</div>

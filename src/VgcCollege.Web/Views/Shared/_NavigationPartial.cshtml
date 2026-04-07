@@ -1,0 +1,89 @@
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    <li class="nav-item">
+        <a class="nav-link" asp-controller="Home" asp-action="Index">Dashboard</a>
+    </li>
+
+    @if (User.IsInRole("Administrator"))
+    {
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Admin</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" asp-controller="Branches" asp-action="Index">Branches</a></li>
+                <li><a class="dropdown-item" asp-controller="Courses" asp-action="Index">Courses</a></li>
+                <li><a class="dropdown-item" asp-controller="Students" asp-action="Index">Students</a></li>
+                <li><a class="dropdown-item" asp-controller="Faculty" asp-action="Index">Faculty</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" asp-controller="Enrolments" asp-action="Index">Enrolments</a></li>
+                <li><a class="dropdown-item" asp-controller="Attendance" asp-action="Index">Attendance</a></li>
+                <li><a class="dropdown-item" asp-controller="Assignments" asp-action="Index">Assignments</a></li>
+                <li><a class="dropdown-item" asp-controller="Exams" asp-action="Index">Exams</a></li>
+            </ul>
+        </li>
+    }
+
+    @if (User.IsInRole("Faculty"))
+    {
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">My Teaching</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" asp-controller="Courses" asp-action="Index">My Courses</a></li>
+                <li><a class="dropdown-item" asp-controller="Students" asp-action="Index">My Students</a></li>
+                <li><a class="dropdown-item" asp-controller="Enrolments" asp-action="Index">Enrolments</a></li>
+                <li><a class="dropdown-item" asp-controller="Attendance" asp-action="Index">Attendance</a></li>
+                <li><a class="dropdown-item" asp-controller="Assignments" asp-action="Index">Assignments</a></li>
+                <li><a class="dropdown-item" asp-controller="Exams" asp-action="Index">Exams</a></li>
+            </ul>
+        </li>
+    }
+
+    @if (User.IsInRole("Student"))
+    {
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">My Studies</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" asp-controller="Students" asp-action="MyProfile">My Profile</a></li>
+                <li><a class="dropdown-item" asp-controller="Attendance" asp-action="Index">My Attendance</a></li>
+                <li><a class="dropdown-item" asp-controller="Assignments" asp-action="Index">My Assignments</a></li>
+                <li><a class="dropdown-item" asp-controller="Exams" asp-action="Index">My Exam Results</a></li>
+            </ul>
+        </li>
+    }
+</ul>
+
+<ul class="navbar-nav ms-auto">
+    @if (SignInManager.IsSignedIn(User))
+    {
+        <li class="nav-item">
+            <span class="navbar-text me-3 text-white-50 small">
+                @if (User.IsInRole("Administrator"))
+                {
+                    <span class="badge bg-danger">Admin</span>
+                }
+                else if (User.IsInRole("Faculty"))
+                {
+                    <span class="badge bg-info">Faculty</span>
+                }
+                else if (User.IsInRole("Student"))
+                {
+                    <span class="badge bg-success">Student</span>
+                }
+                @User.Identity?.Name
+            </span>
+        </li>
+        <li class="nav-item">
+            <form method="post" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="/">
+                <button type="submit" class="btn btn-sm btn-outline-light">Logout</button>
+            </form>
+        </li>
+    }
+    else
+    {
+        <li class="nav-item">
+            <a class="nav-link" asp-area="Identity" asp-page="/Account/Login">Login</a>
+        </li>
+    }
+</ul>

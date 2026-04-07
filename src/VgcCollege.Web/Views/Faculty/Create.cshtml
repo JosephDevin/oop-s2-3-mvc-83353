@@ -1,0 +1,39 @@
+@model VgcCollege.Web.Models.FacultyProfile
+@{
+    ViewData["Title"] = "Create Faculty";
+}
+
+<h2 class="mb-4">Create Faculty Profile</h2>
+
+<div class="card" style="max-width:500px">
+    <div class="card-body">
+        <form asp-action="Create" method="post">
+            <div class="mb-3">
+                <label asp-for="IdentityUserId" class="form-label">Identity User ID</label>
+                <input asp-for="IdentityUserId" class="form-control" />
+                <span asp-validation-for="IdentityUserId" class="text-danger small"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Name" class="form-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger small"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Email" class="form-label"></label>
+                <input asp-for="Email" class="form-control" type="email" />
+                <span asp-validation-for="Email" class="text-danger small"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Phone" class="form-label"></label>
+                <input asp-for="Phone" class="form-control" />
+                <span asp-validation-for="Phone" class="text-danger small"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Create</button>
+            <a asp-action="Index" class="btn btn-secondary ms-2">Cancel</a>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,40 @@
+@model VgcCollege.Web.Models.Assignment
+@{
+    ViewData["Title"] = "Edit Assignment";
+}
+
+<h2 class="mb-4">Edit Assignment</h2>
+
+<div class="card" style="max-width:500px">
+    <div class="card-body">
+        <form asp-action="Edit" method="post">
+            <input type="hidden" asp-for="Id" />
+            <div class="mb-3">
+                <label asp-for="CourseId" class="form-label">Course</label>
+                <select asp-for="CourseId" asp-items="ViewBag.Courses" class="form-select"></select>
+                <span asp-validation-for="CourseId" class="text-danger small"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Title" class="form-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger small"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="MaxScore" class="form-label"></label>
+                <input asp-for="MaxScore" class="form-control" type="number" step="0.01" />
+                <span asp-validation-for="MaxScore" class="text-danger small"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="DueDate" class="form-label"></label>
+                <input asp-for="DueDate" class="form-control" type="date" />
+                <span asp-validation-for="DueDate" class="text-danger small"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Save</button>
+            <a asp-action="Index" class="btn btn-secondary ms-2">Cancel</a>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

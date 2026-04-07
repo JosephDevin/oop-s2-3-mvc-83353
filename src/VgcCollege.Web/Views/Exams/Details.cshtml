@@ -1,0 +1,71 @@
+@model VgcCollege.Web.Models.Exam
+@{
+    ViewData["Title"] = "Exam Details";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>@Model.Title</h2>
+    <div>
+        <a asp-action="AddResult" asp-route-examId="@Model.Id" class="btn btn-success">Add Result</a>
+        @if (User.IsInRole("Administrator"))
+        {
+            <form asp-action="ToggleRelease" asp-route-id="@Model.Id" method="post" style="display:inline">
+                <button type="submit" class="btn btn-@(Model.ResultsReleased ? "warning" : "info") ms-2">
+                    @(Model.ResultsReleased ? "Hide Results" : "Release Results")
+                </button>
+            </form>
+        }
+        <a asp-action="Index" class="btn btn-secondary ms-2">Back</a>
+    </div>
+</div>
+
+<div class="row g-4">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header fw-semibold">Details</div>
+            <div class="card-body">
+                <dl class="row mb-0">
+                    <dt class="col-5">Course</dt>
+                    <dd class="col-7">@Model.Course?.Name</dd>
+                    <dt class="col-5">Date</dt>
+                    <dd class="col-7">@Model.ExamDate.ToString("dd MMM yyyy")</dd>
+                    <dt class="col-5">Max Score</dt>
+                    <dd class="col-7">@Model.MaxScore</dd>
+                    <dt class="col-5">Status</dt>
+                    <dd class="col-7">
+                        @if (Model.ResultsReleased)
+                        {
+                            <span class="badge bg-success">Released</span>
+                        }
+                        else
+                        {
+                            <span class="badge bg-secondary">Unreleased</span>
+                        }
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header fw-semibold">Results</div>
+            <div class="table-responsive">
+                <table class="table table-sm mb-0">
+                    <thead class="table-light">
+                        <tr><th>Student</th><th>Score</th><th>Grade</th></tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var r in Model.Results)
+                        {
+                            <tr>
+                                <td>@r.StudentProfile?.Name</td>
+                                <td>@r.Score / @Model.MaxScore</td>
+                                <td><span class="badge bg-@(r.Grade == "A" ? "success" : r.Grade == "B" ? "primary" : r.Grade == "C" ? "info" : r.Grade == "D" ? "warning" : "danger")">@r.Grade</span></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

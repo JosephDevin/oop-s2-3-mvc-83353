@@ -1,0 +1,54 @@
+@model VgcCollege.Web.Models.Assignment
+@{
+    ViewData["Title"] = "Assignment Details";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>@Model.Title</h2>
+    <div>
+        <a asp-action="AddResult" asp-route-assignmentId="@Model.Id" class="btn btn-success">Add Result</a>
+        <a asp-action="Index" class="btn btn-secondary ms-2">Back</a>
+    </div>
+</div>
+
+<div class="row g-4">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header fw-semibold">Details</div>
+            <div class="card-body">
+                <dl class="row mb-0">
+                    <dt class="col-5">Course</dt>
+                    <dd class="col-7">@Model.Course?.Name</dd>
+                    <dt class="col-5">Due Date</dt>
+                    <dd class="col-7">@Model.DueDate.ToString("dd MMM yyyy")</dd>
+                    <dt class="col-5">Max Score</dt>
+                    <dd class="col-7">@Model.MaxScore</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header fw-semibold">Results</div>
+            <div class="table-responsive">
+                <table class="table table-sm mb-0">
+                    <thead class="table-light">
+                        <tr><th>Student</th><th>Score</th><th>%</th><th>Feedback</th></tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var r in Model.Results)
+                        {
+                            var pct = Model.MaxScore > 0 ? (double)(r.Score / Model.MaxScore * 100) : 0;
+                            <tr>
+                                <td>@r.StudentProfile?.Name</td>
+                                <td>@r.Score / @Model.MaxScore</td>
+                                <td>@pct.ToString("F1")%</td>
+                                <td>@(r.Feedback ?? "-")</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

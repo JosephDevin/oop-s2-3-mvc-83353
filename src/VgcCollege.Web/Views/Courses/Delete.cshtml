@@ -1,0 +1,14 @@
+@model VgcCollege.Web.Models.Course
+@{
+    ViewData["Title"] = "Delete Course";
+}
+
+<h2>Delete Course</h2>
+<div class="alert alert-warning mt-3">
+    Are you sure you want to delete <strong>@Model.Name</strong> (@Model.Branch?.Name)?
+</div>
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Yes, Delete</button>
+    <a asp-action="Index" class="btn btn-secondary ms-2">Cancel</a>
+</form>
